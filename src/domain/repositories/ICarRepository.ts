@@ -1,4 +1,4 @@
-import { car } from '../entities/car';
+import { Car } from '../entities/car';
 
 export interface ICarRepository {
     create(car: Car): Promise<void>;

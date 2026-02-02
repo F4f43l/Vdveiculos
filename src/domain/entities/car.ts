@@ -1,20 +1,20 @@
 export class Car {
     private id: string;
-    private datas:string;
-    private disponibilidade:string;
+    private placa:string;
+    private disponibilidade: boolean;
 
-    constructor(id: string, datas: string, disponibilidade: string) {
+    constructor(id: string, placa: string, disponibilidade: boolean) {
         this.id = id;
-        this.datas = datas;
+        this.placa = placa;
         this.disponibilidade = disponibilidade;
     } 
     getId(): string {
         return this.id;
     }
-    getDatas(): string {
-        return this.datas;
+    getPlaca(): string {
+        return this.placa;
     }
-    getDisponibilidade(): string {
+    getDisponibilidade(): boolean {
         return this.disponibilidade;
     }
 }

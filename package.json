@@ -11,10 +11,13 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "prisma": "^7.3.0",
+    "prisma": "^6.19.2",
     "typescript": "^5.9.3"
   },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
   "dependencies": {
-    "@prisma/client": "^7.3.0"
+    "@prisma/client": "^6.19.2"
   }
 }
