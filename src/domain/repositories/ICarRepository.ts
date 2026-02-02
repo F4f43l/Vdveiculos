@@ -6,3 +6,6 @@ export interface ICarRepository {
     findLicensePlate(licensePlate: string): Promise<Car | null>;
     save(car: Car): Promise<void>;
 }
+export interface ICarRepository {
+    updateAvailable(id: string, available: boolean): Promise<void>;
+}
