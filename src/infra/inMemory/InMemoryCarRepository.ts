@@ -1,16 +1,16 @@
 import { ICarRepository } from "../../domain/repositories/ICarRepository";
-import { car } from "../../domain/entities/car.ts";
+import { Car } from "../../domain/entities/car";
 
 export class InMemoryCarRepository implements ICarRepository {
-  private cars: car[] = [];
-    async create(car: car): Promise<void> {
+  private cars: Car[] = [];
+    async create(car: Car): Promise<void> {
       this.cars.push(car);
     }
-    async findById(id: string): Promise<car | null> {
-      const car = this.cars.find((car) => car.id === id);
+    async findId(id: string): Promise<Car | null> {
+      const car = this.cars.findIndex((car) => car.getId() === id);
       return car || null;
     }
-    async updtadeAvailable(id: string, available: boolean): Promise<void> {
-      const carIndex = this.cars.findIndex((car) => car.id === id);
+    async atualizarDispo(id: string, disponibilidade: boolean): Promise<void> {
+      const carIndex = this.cars.findIndex((car) => car.getId() === id);
     }
 }

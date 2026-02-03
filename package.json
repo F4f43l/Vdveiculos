@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "dev": "tsx src/main.ts",
+    "prisma:generate": "npx prisma migrate dev --name init",
+    "prisma:migrate": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/node": "^25.2.0",
     "prisma": "^6.19.2",
     "typescript": "^5.9.3",
     "vitest": "^4.0.18"

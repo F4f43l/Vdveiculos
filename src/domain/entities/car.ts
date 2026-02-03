@@ -17,4 +17,10 @@ export class Car {
     getDisponibilidade(): boolean {
         return this.disponibilidade;
     }
+    markSeIndisponivel(): void { //não disponível
+        this.disponibilidade = false;
+    }
+    markSeDisponivel(): void { //disponível
+        this.disponibilidade = true;
+    }
 }
